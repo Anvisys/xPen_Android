@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a2937</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryLight">#cee2fc</color>
+    <color name="tab_background_selected">#303F9F</color>
+    <color name="lightbl">#BCD2EE</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="bk">#e8f4ff</color>
+    <color name="abc">#7bc6f1</color>
+    <color name="blue">#4193ff</color>
+    <color name="lightblue">#a3d3ff</color>
+    <color name="color_white_semitransparent">#50ffffff</color>
+    <color name="back">#85bcfc</color>
+    <color name="green">#348f3f</color>
+    <color name="red">#f25b5b</color>
+    <color name="lightgreen">#83cf8c</color>
+    <color name="gray">#6e6e6e</color>
+    <color name="lightgray">#b3b0ae</color>
+    <color name="tab">#7482af</color>
+    <color name="orange">#ffcd55</color>
+    <color name="range">#bccdf5</color>
+    <color name="mblue">#6c63ff</color>
+    <color name="mpink">#fa959f</color>
+    <color name="mgreen">#029e74</color>
+    <color name="bg">#d2e0ff</color>  //c1ebdd
+
+</resources>
