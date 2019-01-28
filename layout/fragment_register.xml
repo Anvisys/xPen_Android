@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:id="@+id/regisrter"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="net.anvisys.xpen.Login.RegisterFragment">
+
+    <TextView
+        android:id="@+id/planName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web Industrial Plan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+                                                                                                                                                                                                                                                                                                                                      <TextView
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/planName"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/blue"
+        android:text="Change plan"/>
+
+
+    <EditText
+        android:id="@+id/txtOrgName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/OrgName"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/planName"
+        app:layout_constraintStart_toStartOf="@+id/planName"
+        />
+
+
+    <EditText
+        android:id="@+id/txtEmplyeeCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txtEmpCount"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/txtOrgName"
+        app:layout_constraintTop_toBottomOf="@id/txtOrgName" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="@string/txtUserName"
+        app:layout_constraintTop_toBottomOf="@id/txtEmplyeeCount"
+        app:layout_constraintStart_toStartOf="@id/txtEmplyeeCount"
+        />
+
+    <EditText
+        android:id="@+id/txtUserMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:hint="@string/txtUserMobile"
+        app:layout_constraintTop_toBottomOf="@id/txtUserName"
+        app:layout_constraintStart_toStartOf="@id/txtUserName"
+        />
+    <EditText
+        android:id="@+id/txtUserEMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/txtUserEMail"
+        app:layout_constraintTop_toBottomOf="@id/txtUserMobile"
+        app:layout_constraintStart_toStartOf="@id/txtUserMobile"
+        />
+    <EditText
+        android:id="@+id/txtCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txtCity"
+        app:layout_constraintTop_toBottomOf="@id/txtUserEMail"
+        app:layout_constraintStart_toStartOf="@id/txtUserEMail"
+        />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtCity"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Register"
+        />
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="10dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

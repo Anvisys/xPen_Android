@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.anvisys.xpen.AddActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/selectProjectName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Select Project"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="32dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/txtClientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/selectProjectName"
+        app:layout_constraintStart_toStartOf="@id/selectProjectName"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:text="Client"
+        />
+    <TextView
+        android:id="@+id/txtApproverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtClientName"
+        app:layout_constraintStart_toStartOf="@id/txtClientName"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:text="Client"
+        />
+    <EditText
+        android:id="@+id/txtActivityName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtApproverName"
+        app:layout_constraintStart_toStartOf="@id/txtApproverName"
+        android:layout_marginTop="10dp"
+        android:hint="Activity Name"
+        />
+    <EditText
+        android:id="@+id/txtActivityDescription"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtActivityName"
+        app:layout_constraintStart_toStartOf="@id/txtActivityName"
+        android:layout_marginTop="10dp"
+        android:hint="Description"
+        />
+    <Button
+        android:id="@+id/btnAddActivity"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtActivityDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="AddActivity"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/blue"
+        android:text="ADD"
+        android:textColor="@color/white"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="10dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

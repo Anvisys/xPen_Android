@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="net.anvisys.xpen.Login.PlanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginLeft="40dp"
+        android:text="Choose your plan"
+        android:textSize="20dp" />
+    <RadioGroup
+        android:id="@+id/planRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:contentDescription="Choose Your Plan"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        android:orientation="vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/planIndividual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="Individual Plan"
+            android:selectAllOnFocus="true"
+            />
+        <RadioButton
+            android:id="@+id/planWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Web Industrial"
+            android:textSize="17dp"
+            android:enabled="true"
+            />
+        <RadioButton
+            android:id="@+id/planEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="Enterprise Solution"
+            android:enabled="true"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textPlan"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="150dp"
+        android:textSize="16dp"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/planRadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/planRadioGroup" />
+
+    <Button
+        android:id="@+id/btnPlanSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Ok"
+        android:textColor="@color/white"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="Selected"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.anvisys.xpen.AddProjectActivity"
+    tools:showIn="@layout/activity_add_project">
+
+
+    <EditText
+        android:id="@+id/txtProjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:hint="Project Name"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_filter_value_blue_24dp"
+        />
+    <EditText
+        android:id="@+id/txtProjectNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtProjectName"
+        app:layout_constraintStart_toStartOf="@id/txtProjectName"
+        android:layout_marginTop="10dp"
+        android:hint="Project Number"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_filter_projectnumber_black_24dp"
+
+        />
+    <EditText
+        android:id="@+id/txtClientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtProjectNumber"
+        app:layout_constraintStart_toStartOf="@id/txtProjectNumber"
+        android:layout_marginTop="10dp"
+        android:hint="Client Name"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_person_clint_blue_24dp"
+        />
+    <EditText
+        android:id="@+id/txtProjectValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtClientName"
+        app:layout_constraintStart_toStartOf="@id/txtClientName"
+        android:layout_marginTop="10dp"
+        android:hint="Project Value"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_attach_money_blue_24dp"
+
+        />
+    <EditText
+        android:id="@+id/txtProjectDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtProjectValue"
+        app:layout_constraintStart_toStartOf="@id/txtProjectValue"
+        android:layout_marginTop="10dp"
+        android:hint="Description"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_insert_discription_blue_24dp"
+        />
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtProjectDescription"
+        android:layout_marginTop="20dp"
+       android:background="@drawable/round"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="SaveProject"
+        android:text="Save"
+        android:textColor="@color/white"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        />
+</android.support.constraint.ConstraintLayout>

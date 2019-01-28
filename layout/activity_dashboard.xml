@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="net.anvisys.xpen.DashboardActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/viewTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/TabLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/tab"
+            app:tabGravity="fill"
+            app:tabMode="fixed"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            app:layout_constraintStart_toStartOf="@id/tab_layout"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+    </LinearLayout>
+
+
+        <!--->*****Action Layouts***<-->
+        <include
+            android:id="@+id/bar1"
+            layout="@layout/action_bar_activity_project" />
+
+        <include
+            android:id="@+id/bar2"
+            layout="@layout/action_bar_manager" />
+
+        <include
+            android:id="@+id/bar3"
+            layout="@layout/action_bar_admin" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ExpManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="6dp"
+            android:background="#fff"
+            android:padding="5dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/mExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Status "
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue"
+                />
+            <LinearLayout
+                android:id="@+id/inprogress1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="@id/mExp"
+                app:layout_constraintTop_toBottomOf="@id/mExp"
+                >
+                <TextView
+                    android:id="@+id/Progress1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="InProgress: "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+
+                    />
+                <TextView
+                    android:id="@+id/txtInProgress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" {3} CCTV, ODS Survey,test1"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/approve1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/inprogress1"
+                app:layout_constraintTop_toBottomOf="@id/inprogress1"
+                >
+                <TextView
+                    android:id="@+id/Approved1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Approved:  "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtApproved1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" {2} HR Recruitment,Surway for PMAY "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/approve1"
+                app:layout_constraintTop_toBottomOf="@id/approve1"
+                >
+                <TextView
+                    android:id="@+id/Submitted1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submitted:  "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtSubmitted1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="{4} CCTV-LadiesClub,Nestin,Office Renovetion,Internal,SBI ATM "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="6dp"
+            android:background="#fff"
+            android:padding="5dp"
+            >
+            <TextView
+                android:id="@+id/last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Transactions"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue"
+                />
+            <TextView
+                android:id="@+id/txtActivity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=">> Rs 5000.00 Credited on 12jan,2019"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/last"
+                app:layout_constraintTop_toBottomOf="@id/last"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+
+                />
+            <TextView
+                android:id="@+id/txtActivity2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=">> Rs 10000.00 debited on 19jan,2019"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/txtActivity1"
+                app:layout_constraintTop_toBottomOf="@id/txtActivity1"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="6dp"
+            android:padding="5dp"
+            android:background="#fff"
+            >
+            <TextView
+                android:id="@+id/DailyExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daily Expense:"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue"
+                />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="@id/DailyExp"
+                app:layout_constraintTop_toBottomOf="@id/DailyExp"
+                >
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="6dp"
+            android:background="#fff"
+            android:padding="5dp"
+            android:visibility="visible"
+            >
+            <TextView
+                android:id="@+id/accActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expense Status "
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue"
+                />
+            <LinearLayout
+                android:id="@+id/inprogress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="@id/accActivity"
+                app:layout_constraintTop_toBottomOf="@id/accActivity"
+                >
+                <TextView
+                    android:id="@+id/Progress"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="InProgress: "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtInProgCount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" {5} "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/txtInProgress"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="  Rs6000 "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:layout_gravity="end"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/approve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="@id/inprogress"
+                app:layout_constraintTop_toBottomOf="@id/inprogress"
+                >
+                <TextView
+                    android:id="@+id/Approved"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Approved:  "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtApprovedCount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" {4}"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/txtApproved"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Rs10000 "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:layout_gravity="end"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="@id/approve"
+                app:layout_constraintTop_toBottomOf="@id/approve"
+                >
+                <TextView
+                    android:id="@+id/Submitted"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Submitted:  "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtSubmittedCount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" {4} "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/txtSubmitted"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" Rs25000 "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#fff"
+            android:elevation="6dp"
+            android:padding="5dp"
+            >
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:id="@+id/pie_chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+            </com.github.mikephil.charting.charts.PieChart>
+            <com.numetriclabz.numandroidcharts.SemiCircle
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_margin="0dp"
+                android:id="@+id/semi_circle_chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:semiInnerCircleRatio="0"
+                app:semi_circle="false"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                />
+          <Button
+              android:id="@+id/showLocalData"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              app:layout_constraintStart_toEndOf="@id/pie_chart"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:text="Local Data"
+              android:textColor="@color/white"
+              android:background="@drawable/round"
+              android:backgroundTint="@color/lightgray"
+              android:onClick="OnAction"
+              />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/background_card"
+            android:elevation="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/chartTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="last 5 days"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ListView
+                android:id="@+id/lastTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="3dp"
+                >
+            </ListView>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
